@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Custom base styles */
+body {
+  @apply bg-white text-gray-800 font-sans;
+}
+
+/* Make buttons look nicer by default */
+button {
+  @apply transition duration-200;
+}
