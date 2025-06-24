@@ -17,32 +17,31 @@ const Footer = () => {
               <a href="#" className="text-green-600 hover:text-green-800"><i className="fab fa-linkedin-in"></i></a>
               <a href="#" className="text-green-600 hover:text-green-800"><i className="fab fa-twitter"></i></a>
             </div>
-            <p className="mt-4 text-sm">Company Number: 08049333</p>
           </div>
   
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-3">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-green-600">Home</a></li>
-              <li><a href="#" className="hover:text-green-600">About</a></li>
-              <li><a href="#" className="hover:text-green-600">Services</a></li>
-              <li><a href="#" className="hover:text-green-600">FAQ</a></li>
-              <li><a href="#" className="hover:text-green-600">Contact Us</a></li>
-              <li><a href="#" className="hover:text-green-600">Policies</a></li>
-            </ul>
-          </div>
+  <h4 className="font-semibold mb-3">Quick Links</h4>
+  <ul className="space-y-2 text-sm">
+    <li><Link to="/" className="hover:text-green-600">Home</Link></li>
+    <li><Link to="/about" className="hover:text-green-600">About</Link></li>
+    <li><Link to="/services" className="hover:text-green-600">Services</Link></li>
+    <li><Link to="/faq" className="hover:text-green-600">FAQ</Link></li>
+    <li><Link to="/contact" className="hover:text-green-600">Contact Us</Link></li>
+    <li><Link to="/policies" className="hover:text-green-600">Policies</Link></li>
+  </ul>
+</div>
   
           {/* Contact Info */}
           <div>
             <h4 className="font-semibold mb-3">Get In Touch</h4>
             <p className="text-sm">
               <i className="fas fa-envelope mr-0"></i>
-              info@leadsforgreen.co.uk
+              info@leadsforgreen.com
             </p>
             <p className="text-sm mt-2">
               <i className="fas fa-phone-alt mr-0"></i>
-              01642 686 680
+              +44 7590 481136
             </p>
           </div>
   

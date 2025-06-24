@@ -9,7 +9,7 @@ const Home = ({ setFormOpen }) => {
       <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 className="text-3xl sm:text-4xl font-bold text-sky-800 mb-4">
-            ECO4 Grants Available Now!
+            ECO4 and GBIS Grants Available Now!
           </h2>
           <p className="mb-6 text-gray-700 text-base sm:text-lg">
             If you own your home and you or someone in your household is in receipt of government credits,
@@ -35,7 +35,7 @@ const Home = ({ setFormOpen }) => {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-center text-2xl font-bold mb-4">OUR SERVICES</h3>
           <h2 className="text-center text-3xl font-semibold mb-10">
-            ECO 4 Energy Solutions
+            ECO4 Energy Solutions and GBIS
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Reusable Card Component */}
@@ -61,16 +61,10 @@ const Home = ({ setFormOpen }) => {
                   "Lower-income households in the UK may qualify for free or subsidised internal wall insulation...",
                 path: "/free-internal-wall-insulation",
               },
-              {
-                img: "/Images/n3.jpg",
-                title: "FREE Air Source Heat Pump",
-                desc:
-                  "You may be eligible for a free or heavily subsidised air source heat pump installation under the ECO 4 scheme...",
-                path: "/free-air-source-heat-pump",
-              },
+       
               {
                 img: "/Images/n2.jpg",
-                title: "FREE Back Boiler Replacement",
+                title: "FREE Back Boiler upgrade Grants",
                 desc:
                   "If you have a back boiler, you may be eligible for a free or subsidised conversion to a more energy-efficient system.",
                 path: "/free-back-boiler-replacement",
@@ -102,10 +96,10 @@ const Home = ({ setFormOpen }) => {
       <section className="py-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-semibold mb-6">
-            The ECO 4 Funding Process…
+            The ECO4 Funding Process…
           </h2>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-            It couldn’t be easier to get started and apply for ECO 4 funding with our easy 3 step process!
+            It couldn’t be easier to get started and apply for ECO4 funding with our easy 3 step process!
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             {[
@@ -125,19 +119,20 @@ const Home = ({ setFormOpen }) => {
 
       {/* Quote Section */}
       <section className="bg-sky-100 py-16 text-center">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl font-bold text-cyan-900 mb-4">Get A Quote Now!</h2>
-          <p className="text-gray-700 mb-6">
-            Use our simple form below to apply for ECO 4 funding. A member of our team will review your application and be in touch.
-          </p>
-          <button
-            className="bg-cyan-700 text-white px-6 py-2 rounded hover:bg-cyan-800"
-            onClick={() => setFormOpen(true)}
-          >
-            Get A Quote
-          </button>
-        </div>
-      </section>
+  <div className="max-w-2xl mx-auto px-4 sm:px-6">
+    <h2 className="text-3xl font-bold text-cyan-900 mb-4">Why Is It Free?</h2>
+    <p className="text-gray-700 mb-6">
+      Thanks to the UK Government's ECO4 scheme, eligible households can receive heating and insulation upgrades at no cost. We’ll help you access it — simply and quickly.
+    </p>
+    <button
+      className="bg-cyan-700 text-white px-6 py-2 rounded hover:bg-cyan-800"
+      onClick={() => window.location.href = '/why-is-it-free'}
+    >
+      Learn More
+    </button>
+  </div>
+</section>
+
     </div>
   );
 };

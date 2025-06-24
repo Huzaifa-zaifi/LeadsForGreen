@@ -28,10 +28,11 @@ const Header = ({ setFormOpen }) => {
     <header className="bg-sky-600 text-white shadow sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
-          <img src="/Logo.jpeg" alt="Logo" className="h-10 w-10 rounded-full shadow-lg" />
-          <span className="font-extrabold text-lg sm:text-xl tracking-wide">LeadsForGreen</span>
-        </div>
+        <Link to="/" className="flex items-center space-x-3">
+  <img src="/Logo.jpeg" alt="Logo" className="h-10 w-10 rounded-full shadow-lg" />
+  <span className="font-extrabold text-lg sm:text-xl tracking-wide">LeadsForGreen</span>
+</Link>
+
 
         {/* Hamburger (mobile) */}
         <div className="md:hidden">

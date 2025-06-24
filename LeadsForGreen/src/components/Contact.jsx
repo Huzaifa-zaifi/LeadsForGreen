@@ -1,67 +1,109 @@
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Logos from './Logos';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  return (
-    <>
-      <section className="bg-sky-100 py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-sky-800 mb-4">Contact Us</h2>
-          <p className="text-gray-700 text-lg mb-2">
-            You can contact us using the details below or fill in our form and one of our helpful advisors will be in touch.
-          </p>
-        </div>
+  const form = useRef();
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 mt-10">
-          {/* Contact Details */}
-          <div className="space-y-4 text-gray-700">
-            <div>
-              <h3 className="font-semibold text-lg text-sky-700">Phone</h3>
-              <p>0330 818 6395</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg text-sky-700">Email</h3>
-              <p>enquiries@simplexeco.co.uk</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg text-sky-700">Registered Address</h3>
-              <p>LeadsForsky Eco LTD<br />1-3 College Street, St Helens, England, WA10 1TD</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg text-sky-700">Opening Hours</h3>
-              <p>Monday – Friday: 9am to 5pm</p>
-              <p>Saturday & Sunday: Closed</p>
-            </div>
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_glgwy88',    
+        'template_7ds4hb8',   
+        form.current,
+        'RDd62LfmIq7OTVFuM'     
+      )
+      .then(
+        () => {
+          setSuccess(true);
+          setError('');
+          form.current.reset();
+        },
+        (err) => {
+          console.error(err.text);
+          setError('❌ Failed to send. Please try again later.');
+        }
+      );
+  };
+
+  return (
+    <section className="bg-sky-100 py-16 px-6">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-sky-800 mb-4">Contact Us</h2>
+        <p className="text-gray-700 text-lg mb-2">
+          Fill in the form and one of our helpful advisors will be in touch shortly.
+        </p>
+        {success && (
+          <div className="bg-green-100 text-green-800 px-4 py-2 rounded mt-4">
+            ✅ Thank you! Your message has been sent.
+          </div>
+        )}
+        {error && (
+          <div className="bg-red-100 text-red-800 px-4 py-2 rounded mt-4">
+            {error}
+          </div>
+        )}
+      </div>
+
+      <div className="max-w-2xl mx-auto mt-10">
+        <form ref={form} onSubmit={sendEmail} className="bg-white p-6 rounded shadow-md space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Name</label>
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Your name"
+              className="w-full border rounded px-3 py-2 mt-1"
+            />
           </div>
 
-          {/* Contact Form */}
-          <form className="bg-white rounded shadow-md p-6 space-y-4">
-            <div>
-              <label className="block text-sm font-medium">Name</label>
-              <input type="text" className="w-full border rounded px-3 py-2 mt-1" placeholder="Your name" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Email</label>
-              <input type="email" className="w-full border rounded px-3 py-2 mt-1" placeholder="Your email" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Telephone</label>
-              <input type="tel" className="w-full border rounded px-3 py-2 mt-1" placeholder="Your number" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Message</label>
-              <textarea rows="4" className="w-full border rounded px-3 py-2 mt-1" placeholder="Your message"></textarea>
-            </div>
-            <button type="submit" className="bg-sky-700 text-white px-6 py-2 rounded hover:bg-sky-800">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Your email"
+              className="w-full border rounded px-3 py-2 mt-1"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Your phone number"
+              className="w-full border rounded px-3 py-2 mt-1"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Message</label>
+            <textarea
+              name="message"
+              rows="4"
+              required
+              placeholder="Your message"
+              className="w-full border rounded px-3 py-2 mt-1"
+            ></textarea>
+          </div>
+
+          <div className="text-center">
+            <button
+              type="submit"
+              className="bg-sky-700 text-white px-6 py-2 rounded hover:bg-sky-800 transition"
+            >
               Send Message
             </button>
-          </form>
-        </div>
-      </section>
-      <Logos />
-    </>
+          </div>
+        </form>
+      </div>
+    </section>
   );
 };
 

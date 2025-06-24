@@ -16,7 +16,7 @@ const About = ({ setFormOpen }) => {
                 <div className="text-center md:text-left">
                 <h2 className="text-3xl font-bold mb-4">Why Choose Us</h2>
                 <p className="text-lg text-gray-700">
-                    We’re proud to be the North East’s leading energy-saving expert, helping homeowners to use less, spend less, and save more.
+                    We’re proud to be the all UK leading energy-saving expert, helping homeowners to use less, spend less, and save more.
                     Our mission is to provide access to funding and expert advice to help homeowners make their homes more energy-efficient and save money on their energy bills.
                 </p>
                 </div>
@@ -36,7 +36,7 @@ At Borthwick Group, we’re committed to providing the best possible service to 
 
 Our tagline is “Helping Homeowners Use Less, Spend Less, and Save More,” and we strive to live up to that tagline in everything we do. We’re passionate about helping homeowners to save money on their energy bills, reduce their carbon footprint, and create a more sustainable future.
 
-If you’re a homeowner in the North East of England and you’re looking to make your home more energy-efficient, consider working with Borthwick Group. We’ll provide expert advice, access to funding, and high-quality installation services, all aimed at helping you to use less, spend less, and save more. Contact us today to find out more and start your energy-saving journey.
+If you’re a homeowner in the whole UK and you’re looking to make your home more energy-efficient, consider working with Borthwick Group. We’ll provide expert advice, access to funding, and high-quality installation services, all aimed at helping you to use less, spend less, and save more. Contact us today to find out more and start your energy-saving journey.
               </p>
             </div>
 
