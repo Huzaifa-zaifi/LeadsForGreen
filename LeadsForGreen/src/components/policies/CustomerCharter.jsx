@@ -11,7 +11,7 @@ const CustomerCharter = () => {
   rel="noopener noreferrer"
   className="text-green-600 underline ml-90 mt-20"
 >
-  View Customer Charter (PDF)
+  View TrustMark Customer Charter (PDF)
 </a>
     </section>
     

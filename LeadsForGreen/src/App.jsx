@@ -238,6 +238,7 @@ function App() {
               >
                 <option>None</option>
                 <option>Income based Jobseeker's Allowance (JSA)</option>
+                <option>Household income less than 31,000£</option>
                 <option>Income Related Employee and Support Allowance (ESA)</option>
                 <option>Pension Credit</option>
                 <option>Income Support</option>

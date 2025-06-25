@@ -44,14 +44,14 @@ const Home = ({ setFormOpen }) => {
                 img: "/Images/n4.jpg",
                 title: "FREE External Wall Insulation",
                 desc:
-                  "If you’re a homeowner in the UK, you may be eligible for a free or heavily subsidised wall insulation installation under the ECO 4 scheme.",
+                  "If you’re a homeowner in the UK, you may be eligible for a free or heavily subsidised wall insulation installation under the Eco4 scheme.",
                 path: "/free-external-wall-insulation",
               },
               {
                 img: "/Images/n5.jpg",
                 title: "FREE Solar Panels Grants",
                 desc:
-                  "Eligible homeowners may receive a free or subsidised solar PV system installation under the ECO 4 scheme...",
+                  "Eligible homeowners may receive a free or subsidised solar PV system installation under the Eco4 scheme...",
                 path: "/free-solar-panels",
               },
               {
@@ -69,6 +69,14 @@ const Home = ({ setFormOpen }) => {
                   "If you have a back boiler, you may be eligible for a free or subsidised conversion to a more energy-efficient system.",
                 path: "/free-back-boiler-replacement",
               },
+       
+              {
+                img: "/Images/boiler.jpg",
+                title: "FREE Boiler upgrade Grants",
+                desc:
+                  "If you have a boiler, you may be eligible for a free and step to a more energy-efficient system.",
+                path: "/free-boiler-replacement",
+              }
             ].map((card, i) => (
               <div key={i} className="bg-white rounded shadow p-6 flex flex-col justify-between">
                 <div>

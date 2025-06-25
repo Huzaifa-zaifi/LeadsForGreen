@@ -8,7 +8,7 @@ const ComplaintsPolicy = () => {
         <h1 className="text-3xl font-bold mb-6">Complaints Policy</h1>
 
         <p className="mb-4">
-          It is the policy of Simplex ECO Limited to provide a high quality service to everyone we deal with. In order to do this we need you to give us any comments about our service, and to tell us when we get things wrong.
+          It is the policy of Leadsforgreen ECO Limited to provide a high quality service to everyone we deal with. In order to do this we need you to give us any comments about our service, and to tell us when we get things wrong.
         </p>
         <p className="mb-4">
           We want to help you resolve your complaint as quickly as possible. We treat any complaint as an expression of dissatisfaction with our service which calls for a response. We listen to your complaints, treat them seriously, and learn from them so that we can continuously improve our service.
@@ -69,7 +69,7 @@ const ComplaintsPolicy = () => {
 
         <h2 className="text-2xl font-semibold mt-6 mb-2">Vulnerable Customer</h2>
         <ul className="list-disc list-inside mb-4 space-y-1">
-          <li>Provide choice – Online form (preferred), post, or email</li>
+          <li>Provide choice – Online form (preferred) or email</li>
           <li>Recognise vulnerability and adjust the process accordingly</li>
           <li>Offer additional advice and allow third-party involvement with permission</li>
         </ul>
@@ -77,18 +77,13 @@ const ComplaintsPolicy = () => {
         <h2 className="text-2xl font-semibold mt-6 mb-2">How to complain</h2>
         <p className="mb-4">
           You can complain via:
-          <br />By Post: Complaints Department, Simplex ECO Limited, 8 Eggleston Court, Middlesbrough, TS2 1RU
-          <br />Email: <a href="mailto:info@simplexeco.co.uk" className="text-green-600 underline">info@simplexeco.co.uk</a>
+          <br />Email: <a href="mailto:info@leadsforgreen.com" className="text-green-600 underline">info@leadsforgreen.com</a>
         </p>
 
         <p className="mb-4">
           If you’ve received an installation via the ECO scheme and are unhappy, contact the energy provider first. If unresolved within 8 weeks, contact:
         </p>
-        <p className="mb-4">
-          <strong>Ombudsman Services: Energy</strong><br />
-          Call: 0330 440 1624<br />
-          Website: <a href="https://www.ombudsman-services.org" target="_blank" rel="noopener noreferrer" className="text-green-600 underline">www.ombudsman-services.org</a>
-        </p>
+        
 
         <h2 className="text-2xl font-semibold mt-6 mb-2">Timescales</h2>
         <ul className="list-disc list-inside mb-4 space-y-1">
