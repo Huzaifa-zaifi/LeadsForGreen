@@ -25,12 +25,13 @@ const About = ({ setFormOpen }) => {
 
   
         {/* Mission Section */}
-        <section className="text-center bg-gray-100 py-20 ">
-          <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center ml-110">
+        <section className="bg-gray-100 py-20">
+  <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
             <div>
               <h2 className="text-3xl text-center font-bold text-sky-700 mb-4">Our Mission</h2>
               <p className="text-gray-700 mb-4">
-              We specialize in providing funding through the ECO 4 scheme to help lower-income households or those in fuel poverty access the funding they need to install a range of energy-saving measures, including air source heat pumps, solar PV systems, wall insulation, loft insulation, room in roof insulation, and more. We work with fully qualified and certified installers who will be PAS2035 and Trustmark certified, ensuring that all work is carried out to the highest standards.
+              We specialize in providing funding through the ECO4 scheme to help lower-income households or those in fuel poverty access the funding they need to install a range of energy-saving measures, including air source heat pumps, solar PV systems, wall insulation, loft insulation, room in roof insulation, and more. We work with fully qualified and certified installers who will be PAS2035 and Trustmark certified, ensuring that all work is carried out to the highest standards.
 
 At Borthwick Group, we’re committed to providing the best possible service to our customers. We pride ourselves on our expertise and our dedication to helping homeowners make their homes more energy-efficient. That’s why we’ve won awards at both the regional and national Energy Efficiency Awards year on year for a long period of time.
 
@@ -51,7 +52,7 @@ If you’re a homeowner in the whole UK and you’re looking to make your home m
               <div className="bg-white p-6 rounded shadow">
                 <h4 className="font-bold text-lg mb-2">Government Approved</h4>
                 <p className="text-sm text-gray-600">
-                  We only work with registered ECO 4 Scheme providers and trusted UK installers.
+                  We only work with registered ECO4 Scheme providers and trusted UK installers.
                 </p>
               </div>
               <div className="bg-white p-6 rounded shadow">
@@ -74,7 +75,7 @@ If you’re a homeowner in the whole UK and you’re looking to make your home m
   <div className="container mx-auto px-6 max-w-3xl">
     <h2 className="text-3xl font-bold text-sky-800 mb-4">From Start to Finish</h2>
     <p className="text-gray-700 mb-6">
-      Use our simple form below to apply for ECO 4 funding. Once you have completed the form,
+      Use our simple form below to apply for ECO4 funding. Once you have completed the form,
       a member of our team will review your application and be in touch to discuss what help is available to you.
     </p>
     <p className="text-gray-700 mb-6">
@@ -86,6 +87,7 @@ If you’re a homeowner in the whole UK and you’re looking to make your home m
       <li>• Free Back Boiler Replacement</li>
       <li>• Free Whole Home Insulation</li>
       <li>• Solar Panels PVs</li>
+      <li>• Free Boiler Replacement</li>
     </ul>
     <div>
       <btn

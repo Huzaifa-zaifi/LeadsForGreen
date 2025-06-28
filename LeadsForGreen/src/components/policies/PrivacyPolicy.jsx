@@ -3,14 +3,14 @@ import React from "react";
 const PrivacyPolicy = () => {
   return (
     <section className="container mx-auto px-6 py-16 text-gray-800">
-      <h1 className="text-3xl font-bold mb-6 text-green-700">Privacy Policy</h1>
+      <h1 className="text-3xl font-bold mb-6 text-skyblue-700">Privacy Policy</h1>
 
       <p className="mb-4">
-        <strong>Who we are:</strong> Our website address is: <a href="https://simplexeco.co.uk" className="text-green-600 underline">https://simplexeco.co.uk</a>.
+        <strong>Who we are:</strong> Our website address is: <a href="https://leadsforgreen.com" className="text-skyblue-600 underline">https://leadsforgreen.com</a>.
       </p>
 
       <p className="mb-4">
-        At Simplex ECO we are strongly committed to protecting the privacy of users of this website, and we do all that we can to protect user information.
+        At LeadForGreen we are strongly committed to protecting the privacy of users of this website, and we do all that we can to protect user information.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">Data Protection</h2>

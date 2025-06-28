@@ -63,8 +63,8 @@ const Home = ({ setFormOpen }) => {
               },
        
               {
-                img: "/Images/n2.jpg",
-                title: "FREE Back Boiler upgrade Grants",
+                img: "/Images/b.jpeg",
+                title: "FREE Back Boiler Upgrade Grants",
                 desc:
                   "If you have a back boiler, you may be eligible for a free or subsidised conversion to a more energy-efficient system.",
                 path: "/free-back-boiler-replacement",
@@ -72,10 +72,18 @@ const Home = ({ setFormOpen }) => {
        
               {
                 img: "/Images/boiler.jpg",
-                title: "FREE Boiler upgrade Grants",
+                title: "FREE Boiler Upgrade Grants",
                 desc:
                   "If you have a boiler, you may be eligible for a free and step to a more energy-efficient system.",
                 path: "/free-boiler-replacement",
+              },
+       
+              {
+                img: "/Images/loft.jpg",
+                title: "FREE Loft Insulation",
+                desc:
+                  "If you have a our pakage, you may be eligible for a free Loft Insulation.",
+                path: "/free-loft-insulation",
               }
             ].map((card, i) => (
               <div key={i} className="bg-white rounded shadow p-6 flex flex-col justify-between">
@@ -134,7 +142,7 @@ const Home = ({ setFormOpen }) => {
     </p>
     <button
       className="bg-cyan-700 text-white px-6 py-2 rounded hover:bg-cyan-800"
-      onClick={() => window.location.href = '/why-is-it-free'}
+      onClick={() => navigate('/why-is-it-free')}
     >
       Learn More
     </button>

@@ -1,23 +1,25 @@
 import Header from './Header';
 import Footer from './Footer';
 
-const FreeInternalWallInsulation = () => {
+const FreeInternalWallInsulation = ({ setFormOpen }) => {
   return (
     <>
       <section className="bg-sky-100 py-20 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Image on the left */}
           <div>
-            <img
-              src="/Images/n4.jpg"
-              alt="External Wall Insulation"
-              className="rounded shadow-md w-full"
-            />
+          <img
+  src="/Images/n6.jpg"
+  alt="Internal Wall Insulation"
+  className="rounded shadow-md w-full h-[400px] md:h-[500px] object-cover"
+/>
+
+
           </div>
 
           {/* Text on the right */}
           <div>
-            <h1 className="text-3xl font-bold text-sky-700 mb-4">Free External Wall Insulation</h1>
+            <h1 className="text-3xl font-bold text-sky-700 mb-4">Free Internal Wall Insulation</h1>
             <p className="text-gray-700 text-lg mb-4">
             <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
   <p>
@@ -58,7 +60,9 @@ const FreeInternalWallInsulation = () => {
 </div>
 
             </p>
-    
+            <button className="bg-sky-600 text-white px-6 py-3 rounded hover:bg-sky-700" onClick={() => setFormOpen(true)}>
+        Apply Now
+      </button>
           </div>
         </div>
       </section>

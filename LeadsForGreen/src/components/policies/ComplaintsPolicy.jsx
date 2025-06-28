@@ -102,14 +102,7 @@ const ComplaintsPolicy = () => {
           We recommend you print out a copy of this policy for future reference.
         </p>
       </div>
-      <a
-  href="/docs/GD-P18-Complaints-Procedure-2023-4.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-green-600 underline ml-90 mt-20"
->
-  View Customer Charter (PDF)
-</a>
+      
     </section>
     
 

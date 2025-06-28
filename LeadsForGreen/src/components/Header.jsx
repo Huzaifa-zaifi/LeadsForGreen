@@ -1,14 +1,27 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 const Header = ({ setFormOpen }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isServicesOpen, setServicesOpen] = useState(false);
   const [isPoliciesOpen, setPoliciesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   const servicesRef = useRef();
   const policiesRef = useRef();
+  const location = useLocation();
+
+  // Unified active class logic
+  const getNavLinkClass = (path, exact = false) =>
+    (exact ? location.pathname === path : location.pathname.startsWith(path))
+      ? "bg-white text-sky-700 font-semibold px-2 py-1 rounded transition"
+      : "hover:underline";
+
+  const getDropdownLinkClass = (path) =>
+    location.pathname.startsWith(path)
+      ? "bg-white-700 text-black font-semibold px-4 py-2"
+      : "hover:bg-sky-700 hover:text-white px-4 py-2 transition";
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -29,22 +42,21 @@ const Header = ({ setFormOpen }) => {
       <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
-  <img src="/Logo.jpeg" alt="Logo" className="h-10 w-10 rounded-full shadow-lg" />
-  <span className="font-extrabold text-lg sm:text-xl tracking-wide">LeadsForGreen</span>
-</Link>
+          <img src="/Logo.jpeg" alt="Logo" className="h-10 w-10 rounded-full shadow-lg" />
+          <span className="font-extrabold text-lg sm:text-xl tracking-wide">LeadsForGreen</span>
+        </Link>
 
-
-        {/* Hamburger (mobile) */}
+        {/* Hamburger */}
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
             <FaBars size={22} />
           </button>
         </div>
 
-        {/* Nav links - Desktop */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 items-center">
-          <Link to="/" className="hover:underline">Home</Link>
-          <Link to="/about" className="hover:underline">About</Link>
+          <Link to="/" className={getNavLinkClass("/", true)}>Home</Link>
+          <Link to="/about" className={getNavLinkClass("/about", true)}>About</Link>
 
           {/* Services Dropdown */}
           <div className="relative" ref={servicesRef}>
@@ -53,19 +65,34 @@ const Header = ({ setFormOpen }) => {
             </button>
             {isServicesOpen && (
               <div className="absolute bg-white text-black shadow rounded mt-2 py-2 w-60 z-10">
-                <Link to="/free-external-wall-insulation" className="block px-4 py-2 hover:bg-gray-100">Free External Wall Insulation</Link>
-                <Link to="/free-solar-panels" className="block px-4 py-2 hover:bg-gray-100">Free Solar Panels Grants</Link>
-                <Link to="/free-internal-wall-insulation" className="block px-4 py-2 hover:bg-gray-100">Free Internal Wall Insulation</Link>
-                <Link to="/free-air-source-heat-pump" className="block px-4 py-2 hover:bg-gray-100">Free Air Source Heat Pump Grants</Link>
-                <Link to="/free-back-boiler-replacement" className="block px-4 py-2 hover:bg-gray-100">Free Back Boiler Replacement</Link>
-                <Link to="/free-boiler-replacement" className="block px-4 py-2 hover:bg-gray-100">Free Boiler Replacement</Link>
+                <Link to="/free-external-wall-insulation" className={`block ${getDropdownLinkClass("/free-external-wall-insulation")}`}>
+                  Free External Wall Insulation
+                </Link>
+                <Link to="/free-solar-panels" className={`block ${getDropdownLinkClass("/free-solar-panels")}`}>
+                  Free Solar Panels Grants
+                </Link>
+                <Link to="/free-internal-wall-insulation" className={`block ${getDropdownLinkClass("/free-internal-wall-insulation")}`}>
+                  Free Internal Wall Insulation
+                </Link>
+                <Link to="/free-air-source-heat-pump" className={`block ${getDropdownLinkClass("/free-air-source-heat-pump")}`}>
+                  Free Air Source Heat Pump Grants
+                </Link>
+                <Link to="/free-back-boiler-replacement" className={`block ${getDropdownLinkClass("/free-back-boiler-replacement")}`}>
+                  Free Back Boiler Replacement
+                </Link>
+                <Link to="/free-boiler-replacement" className={`block ${getDropdownLinkClass("/free-boiler-replacement")}`}>
+                  Free Boiler Replacement
+                </Link>
+                <Link to="/free-loft-insulation" className={`block ${getDropdownLinkClass("/free-loft-insulation")}`}>
+                  Free Loft Insulation
+                </Link>
               </div>
             )}
           </div>
 
-          <Link to="/faq" className="hover:underline">FAQ</Link>
-          <Link to="/contact" className="hover:underline">Contact Us</Link>
-          <Link to="/policies" className="hover:underline">Policies</Link>
+          <Link to="/faq" className={getNavLinkClass("/faq", true)}>FAQ</Link>
+          <Link to="/contact" className={getNavLinkClass("/contact", true)}>Contact Us</Link>
+          <Link to="/policies" className={getNavLinkClass("/policies", true)}>Policies</Link>
 
           <button
             onClick={() => setFormOpen(true)}
@@ -78,12 +105,48 @@ const Header = ({ setFormOpen }) => {
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2 bg-sky-600 text-white">
-          <Link to="/" className="block hover:underline">Home</Link>
-          <Link to="/about" className="block hover:underline">About</Link>
-          <Link to="/faq" className="block hover:underline">FAQ</Link>
-          <Link to="/contact" className="block hover:underline">Contact Us</Link>
-          <Link to="/policies" className="block hover:underline">Policies</Link>
+        <div className="md:hidden px-4 pb-4 bg-sky-600 text-white space-y-2">
+          <div className="flex flex-col space-y-2">
+            <Link to="/" className={getNavLinkClass("/", true)}>Home</Link>
+            <Link to="/about" className={getNavLinkClass("/about", true)}>About</Link>
+
+            {/* Mobile Services Dropdown */}
+            <button
+              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              className="text-left w-full  rounded"
+            >
+              Services
+            </button>
+            {mobileServicesOpen && (
+              <div className="pl-4 flex flex-col space-y-1">
+                <Link to="/free-external-wall-insulation" className={getDropdownLinkClass("/free-external-wall-insulation")}>
+                  Free External Wall Insulation
+                </Link>
+                <Link to="/free-solar-panels" className={getDropdownLinkClass("/free-solar-panels")}>
+                  Free Solar Panels Grants
+                </Link>
+                <Link to="/free-internal-wall-insulation" className={getDropdownLinkClass("/free-internal-wall-insulation")}>
+                  Free Internal Wall Insulation
+                </Link>
+                <Link to="/free-air-source-heat-pump" className={getDropdownLinkClass("/free-air-source-heat-pump")}>
+                  Free Air Source Heat Pump Grants
+                </Link>
+                <Link to="/free-back-boiler-replacement" className={getDropdownLinkClass("/free-back-boiler-replacement")}>
+                  Free Back Boiler Replacement
+                </Link>
+                <Link to="/free-boiler-replacement" className={getDropdownLinkClass("/free-boiler-replacement")}>
+                  Free Boiler Replacement
+                </Link>
+                <Link to="/free-loft-insulation" className={getDropdownLinkClass("/free-loft-insulation")}>
+                  Free Loft Insulation
+                </Link>
+              </div>
+            )}
+
+            <Link to="/faq" className={getNavLinkClass("/faq", true)}>FAQ</Link>
+            <Link to="/contact" className={getNavLinkClass("/contact", true)}>Contact Us</Link>
+            <Link to="/policies" className={getNavLinkClass("/policies", true)}>Policies</Link>
+          </div>
 
           <div className="pt-2">
             <button

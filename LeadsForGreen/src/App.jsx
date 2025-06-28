@@ -19,6 +19,7 @@ import FreeInternalWallInsulation from "./components/FreeInternalWallInsulation"
 import FreeAirSourceHeatPump from "./components/FreeAirSourceHeatPump";
 import FreeBackBoilerReplacement from "./components/FreeBackBoilerReplacement";
 import FreeBoilerReplacement from "./components/FreeBoilerReplacement";
+import FreeLoftInsulation from "./components/FreeLoftInsulation";
 import Policies from "./components/Policies";
 import Feedback from "./components/policies/Feedback";
 import WhyFree from "./components/WhyFree";
@@ -95,12 +96,13 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/policies" element={<Policies />} />
-        <Route path="/free-external-wall-insulation" element={<FreeExternalWallInsulation />} />
+        <Route path="/free-external-wall-insulation" element={<FreeExternalWallInsulation setFormOpen={setFormOpen} />} />
         <Route path="/free-solar-panels" element={<FreeSolarPanels setFormOpen={setFormOpen}/>} />
-        <Route path="/free-internal-wall-insulation" element={<FreeInternalWallInsulation />} />
-        <Route path="/free-air-source-heat-pump" element={<FreeAirSourceHeatPump />} />
-        <Route path="/free-back-boiler-replacement" element={<FreeBackBoilerReplacement />} />
-        <Route path="/free-boiler-replacement" element={<FreeBoilerReplacement />} />
+        <Route path="/free-internal-wall-insulation" element={<FreeInternalWallInsulation setFormOpen={setFormOpen} />} />
+        <Route path="/free-air-source-heat-pump" element={<FreeAirSourceHeatPump setFormOpen={setFormOpen} />} />
+        <Route path="/free-back-boiler-replacement" element={<FreeBackBoilerReplacement setFormOpen={setFormOpen} />} />
+        <Route path="/free-boiler-replacement" element={<FreeBoilerReplacement setFormOpen={setFormOpen} />} />
+        <Route path="/free-loft-insulation" element={<FreeLoftInsulation setFormOpen={setFormOpen}/>} />
         <Route path="/policies/ComplaintsPolicy" element={<ComplaintsPolicy />} />
         <Route path="/policies/CustomerCharter" element={<CustomerCharter />} />
         <Route path="/policies/Feedback" element={<Feedback />} />

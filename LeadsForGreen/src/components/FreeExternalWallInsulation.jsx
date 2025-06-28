@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FreeExternalWallInsulation = () => {
+const FreeExternalWallInsulation = ({ setFormOpen }) => {
   return (
     <>
       <section className="bg-sky-100 py-20 px-6">
@@ -8,7 +8,7 @@ const FreeExternalWallInsulation = () => {
           {/* Image on the left */}
           <div>
             <img
-              src="/Images/n6.jpg"
+              src="/Images/n4.jpg"
               alt="External Wall Insulation"
               className="rounded shadow-md w-full"
             />
@@ -32,7 +32,9 @@ To get started with your wall insulation installation application under the Eco4
 
 So, if you’re looking to improve the energy efficiency of your home and save money on your energy bills, consider applying for wall insulation installation funding under the Eco4 scheme with LeadsForGreen. Contact us today to find out more and start your application.
             </p>
-    
+            <button className="bg-sky-600 text-white px-6 py-3 rounded hover:bg-sky-700" onClick={() => setFormOpen(true)}>
+        Apply Now
+      </button>
           </div>
         </div>
       </section>

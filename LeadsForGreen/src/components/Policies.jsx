@@ -22,11 +22,7 @@ const Policies = () => {
               Trustmark Customer Charter
             </Link>
           </li>
-          <li>
-          <Link to="/policies/Feedback" className="text-sky-700 hover:underline">
-              Feedback Procedure
-            </Link>
-          </li>
+          
           <li>
           <Link to="/policies/PrivacyPolicy" className="text-sky-700 hover:underline">
               Privacy Policy

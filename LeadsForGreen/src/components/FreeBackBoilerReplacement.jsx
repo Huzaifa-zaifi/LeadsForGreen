@@ -1,7 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 
-const FreeBackBoilerReplacement = () => {
+const FreeBackBoilerReplacement = ({ setFormOpen }) => {
   return (
     <div>
       <section className="bg-gray-50 py-16 px-6">
@@ -28,14 +28,16 @@ const FreeBackBoilerReplacement = () => {
       <p className="text-lg text-gray-700 mb-4">
       So, if you’re looking to improve the energy efficiency of your home and save money on your energy bills, consider applying for back boiler conversion funding under the Eco4 scheme with LeadsForGreen. Contact us today to find out more and start your application.
       </p>
-
+      <button className="bg-sky-600 text-white px-6 py-3 rounded hover:bg-sky-700" onClick={() => setFormOpen(true)}>
+        Apply Now
+      </button>
     </div>
 
     {/* Right: Image */}
     <div>
       <img
-        src="/Images/n2.jpg"
-        alt="Free Solar Panels"
+        src="/Images/b.jpeg"
+        alt="Free Back Boiler Grants"
         className="w-full rounded shadow"
       />
     </div>
